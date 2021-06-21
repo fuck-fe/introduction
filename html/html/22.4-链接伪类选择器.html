@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器之链接伪类选择器</title>
+    <style>
+        /* 未访问的链接 a:link 把没有访问过得链接选出来 */
+        a:link{
+            color: #333;
+            text-decoration: none;
+        }
+        /* a:visited 选择访问过得链接 */
+        a:visited{
+            color: orange;
+        }
+        /* a:hover 选择鼠标经过的那个链接 */
+        a:hover{
+            color: paleturquoise;
+        }
+        /* a:active 选择的是鼠标正在按下还没有弹起鼠标的那个链接 */
+        a:active{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">不分手的恋爱</a>
+</body>
+</html>
+<!-- 注意事项：为了确保生效，请按照LVHA的循环顺序生命
+因为a链接在浏览器中具有默认样式，所以我们在实际工作中都需要给链接单独制定样式 -->

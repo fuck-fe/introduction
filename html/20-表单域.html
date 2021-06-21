@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单的调查问卷-雏形</title>
+</head>
+<body>
+    <!-- 表单域 -->
+    <form action="demo.php" method="POST" name="name1">
+    <!-- 表单元素 -->
+        用户名：<input type="text" value="请输入用户名" maxlength="7"><br>
+        <!-- text文本框，用户可以在里面输入任何文字 --><!-- maxlenght默认能输入最大的字符长度，数值为正整数 -->
+        密码：<input type="password" value="请输入密码"><br>
+        <!-- password是密码框，用户看不见输入的密码 -->
+        性别：男<input type="radio" name="sex"> 女<input type="radio" name="sex"> 
+        人妖<input type="radio" name="sex"><br>
+        <!-- radio是单选按钮，可以实现多选一 name是表单元素名字，这里性别单选按钮必须有相同的名字name
+            才能实现多选一-->  
+        爱好：吃饭<input type="checkbox"> 睡觉<input type="checkbox"> 
+        打游戏<input type="checkbox"> 旅游<input type="checkbox"> 爬山<input type="checkbox"><br>
+        <!-- CheckBox 是一个复选框按钮 可实现多选 -->
+        <!-- name、value设定针对后台使用，定义之后可以将用户所勾选内容送至后台 -->
+        是否永远爱我：是<input type="checkbox" checked="checked"><br>
+        <!-- 单选按钮和复选框可以设置checked属性，当页面打开的时候可以默认选中这个按钮 -->
+        <input type="submit" value="注册/登录">
+        <!-- 点击了提交按钮可以把表单域 from里面的表单元素里面的值 提交给后台服务器，
+            通过value可以改变提交按钮上面的文字 -->
+        <input type="reset" value="重新填写"><br>
+        <!-- 重置按钮 还原表单元素初始默认状态 -->
+        <input type="button" value="获取短信验证码"><br>
+        <!-- 普通按键 button 后期结合js 搭配使用 -->
+        上传头像<input type="file">
+        <!-- 文件域，使用场景：上传文件使用 -->
+    </form>
+</body>
+</html>
